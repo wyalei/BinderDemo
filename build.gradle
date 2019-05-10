@@ -1,0 +1,54 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    
+    repositories {
+//        google()
+        jcenter()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.2.0'
+        
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+//        google()
+        jcenter()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+    }
+
+    ext{
+        /** 编译sdk版本 **/
+        compileSdkVersion           = 26
+
+        /** 构建工具版本 **/
+        buildToolsVersion           = "23.0.2"
+
+        /** 支持最低版本 **/
+        minSdkVersion               = 14
+
+        /** 目标版本 **/
+        targetSdkVersion            = 26
+
+        /** design库 **/
+        supportDesign               = "com.android.support:design:26.0.0"
+        supportAppCompact           = 'com.android.support:appcompat-v7:26.0.0'
+
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
