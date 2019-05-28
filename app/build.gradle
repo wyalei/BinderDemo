@@ -7,7 +7,7 @@ android {
         applicationId "com.richtech.binderdemo"
         minSdkVersion project.ext.minSdkVersion
         targetSdkVersion project.ext.targetSdkVersion
-        versionCode 1
+        versionCode project.hasProperty('VERSION_CODE') ? Integer.parseInt(VERSION_CODE) : 2
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
